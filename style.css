@@ -46,3 +46,90 @@ header {
 .main-body {
   padding-top: 40px;
 }
+
+    /* Base reset */
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; color: #0f172a; }
+
+    /* ===== Parallax Hero ===== */
+    .hero {
+      position: relative;
+      height: 90vh;              /* Tall visual section */
+      overflow: hidden;          /* Hide layer overflow */
+      perspective: 1px;          /* Creates subtle depth for sticky fallback */
+      background: #0b1020;       /* Fallback background */
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    /* Background image (CSS-only parallax fallback for desktop) */
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image: url("hero.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      /* Classic parallax for browsers that support it on desktop */
+      background-attachment: fixed;
+      transform: translateZ(0);
+      z-index: -3;
+      opacity: 0.9;
+      filter: saturate(1.05) contrast(1.05);
+    }
+
+    /* Layered parallax elements (PNG/SVG with transparency look great) */
+    .layer {
+      position: absolute; inset: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      will-change: transform;
+      pointer-events: none;      /* These are decorative */
+    }
+    .layer.clouds { background-image: url("/images/clouds.png"); z-index: -2; opacity: 0.7; }
+    .layer.mountains { background-image: url("/images/mountains.png"); z-index: -1; }
+
+    /* Content on top */
+    .hero-content {
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+    .title {
+      font-size: clamp(2rem, 5vw, 4rem);
+      margin: 0 0 0.5rem;
+      letter-spacing: 0.02em;
+      text-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      opacity: 0.9;
+      margin: 0 auto 1.5rem;
+      max-width: 60ch;
+    }
+    .cta {
+      display: inline-block;
+      padding: 0.9rem 1.2rem;
+      background: white;
+      color: #0b1020;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .cta:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0,0,0,.35); }
+
+    /* Body content */
+    .section {
+      padding: 64px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Mobile adjustments: disable background-attachment: fixed on iOS quirks */
+    @supports (-webkit-touch-callout: none) {
+      .hero::before { background-attachment: scroll; }
+    }

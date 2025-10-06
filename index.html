@@ -9,13 +9,24 @@
   <body>
     <header>
       <nav class="main-nav">
-        <a href="/">Hjem</a>
+        <a href="/">Til toppen ^</a>
         <a href="#prosjekter">Prosjekter</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
     </header>
 
-    <div class="main-body">
+  <div class="main-body">
+
+        <!-- Layered images that move at different speeds -->
+    <div class="layer clouds" data-speed="0.25" aria-hidden="true"></div>
+    <div class="layer mountains" data-speed="0.12" aria-hidden="true"></div>
+
+    <!-- Foreground content -->
+    <div class="hero-content">
+      <h1 class="title">Your Stunning Headline</h1>
+      <p class="subtitle">Add a short punchy description here. The background subtly moves as you scroll.</p>
+    </div>
+
       <h1>Hei, jeg er David!</h1>
       <p class="muted">Utvikler / Student. Dette er min lille krok på nettet.</p>
 
@@ -25,12 +36,16 @@
         <li><a href="">Prosjekt 2</a> – kort beskrivelse.</li>
       </ul>
 
-      <h2 id="kontakt">Kontakt</h2>
-      <p>Finn meg på <a href="https://github.com/robotdude1">GitHub</a> eller send e-post: davidaleksandersen@hotmail.com</p>
 
       <h2 id="CV">CV</h2>
       <img src="CV.png" alt="CV" width="600" />
 
+      <h2 id="kontakt">Kontakt</h2>
+      <ul style="list-style-type: none; padding: 0; margin: 50;">
+        <li>E-post – davidaleksandersen@hotmail.com</li>
+        <li>Tlf – 97861608</li>
+        <li><a href="https://www.linkedin.com/in/david-kristoffer-aleksandersen-41b666240/">Linkedin</a></li>
+      </ul>
       <footer>© <span id="y"></span> David Kristoffer Aleksandersen.</footer>
       <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
     </div>
