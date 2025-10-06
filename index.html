@@ -1,53 +1,194 @@
 <!doctype html>
 <html lang="no">
-  <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CV David</title>
-  </head>
-  <body>
-    <header>
-      <nav class="main-nav">
-        <a href="/">Til toppen ^</a>
-        <a href="#prosjekter">Prosjekter</a>
-        <a href="#kontakt">Kontakt</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV David</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fixed top navigation (overlays the hero; no visible gap) -->
+  <header>
+    <nav class="main-nav" aria-label="Hovednavigasjon">
+      <a href="#">Til toppen ^</a>
+      <a href="#prosjekter">Prosjekter</a>
+      <a href="#CV">CV</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
 
-  <div class="main-body">
-
-        <!-- Layered images that move at different speeds -->
-    <div class="layer clouds" data-speed="0.25" aria-hidden="true"></div>
-    <div class="layer mountains" data-speed="0.12" aria-hidden="true"></div>
+  <!-- HERO FIRST so it sits beneath the fixed header with no gap -->
+  <section class="hero" aria-label="Parallax hero">
+    <!-- Background and decorative layers that move at different speeds -->
+    <div class="hero-bg" data-speed="0.1" aria-hidden="true"></div>
+    <div class="layer clouds" data-speed="1.5" aria-hidden="true"></div>
+    <div class="layer mountains" data-speed="0.8" aria-hidden="true"></div>
+    <div class="layer foreground" data-speed="2.0" aria-hidden="true"></div>
 
     <!-- Foreground content -->
     <div class="hero-content">
-      <h1 class="title">Your Stunning Headline</h1>
-      <p class="subtitle">Add a short punchy description here. The background subtly moves as you scroll.</p>
+      <h1 class="title">Hei! jeg er David</h1>
+      <p class="subtitle">Utvikler / Student. Dette er min lille krok på nettet.</p>
+      <a class="cta" href="#prosjekter">Se prosjekter</a>
     </div>
+  </section>
 
-      <h1>Hei, jeg er David!</h1>
-      <p class="muted">Utvikler / Student. Dette er min lille krok på nettet.</p>
-
+  <!-- Main content -->
+  <main>
+    <section class="section">
       <h2 id="prosjekter">Prosjekter</h2>
-      <ul style="list-style-type: none; padding: 0; margin: 0;">
-        <li><a href="">Prosjekt 1</a> – kort beskrivelse.</li>
-        <li><a href="">Prosjekt 2</a> – kort beskrivelse.</li>
+      <ul class="clean">
+        <li><a href="#">AM Essentials</a> – KI Vær-, Antrekk- og Måltidsapp</li>
+        <li><a href="#">Spillprosjekt</a> – WIP</li>
       </ul>
-
 
       <h2 id="CV">CV</h2>
-      <img src="CV.png" alt="CV" width="600" />
+      
+      <div class="cv-container">
+        <!-- Header Section -->
+        <div class="cv-header">
+          <h1 class="cv-name">DAVID KRISTOFFER ALEKSANDERSEN</h1>
+          <div class="cv-contact">
+            <div class="contact-item">📍 Adresse: Terningbekk 6, 0272 Oslo</div>
+            <div class="contact-item">📞 Telefon: 97861608</div>
+            <div class="contact-item">📧 E-post: davidkaleksandersen@hotmail.com</div>
+            <div class="contact-item">🎂 Født: 20.11.2003</div>
+            <div class="contact-item">🌍 Nasjonalitet: Norsk</div>
+          </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="cv-section">
+          <h3 class="cv-section-title">Profil</h3>
+          <p class="cv-text">Bachelor i informatikk: programmering og systemarkitektur. Har solid erfaring med programmering, systemutvikling og teknisk problemløsning, kombinert med gode samarbeidsevner og serviceerfaring som servitør. Jobber effektivt i hektiske miljøer og er god på problemløsing.</p>
+        </div>
+
+        <!-- Education Section -->
+        <div class="cv-section">
+          <h3 class="cv-section-title">Utdanning</h3>
+          <div class="cv-item">
+            <h4 class="cv-item-title">Universitetet i Oslo</h4>
+            <p class="cv-item-subtitle">Bachelor i informatikk: programmering og systemarkitektur</p>
+            <p class="cv-item-date">Mars 2024 – Juni 2026</p>
+            <p class="cv-text">Studiet gir solid kunnskap i programmering, datastrukturer, algoritmer og systemdesign. Man lærer å utvikle og analysere programvare, forstå hvordan datamaskiner og operativsystemer fungerer, og bygge effektive og pålitelige IT-systemer.</p>
+          </div>
+        </div>
+
+        <!-- Work Experience Section -->
+        <div class="cv-section">
+          <h3 class="cv-section-title">Arbeidserfaring</h3>
+          <div class="cv-item">
+            <h4 class="cv-item-title">Servitør / Skiftleder – Peppes Pizza Lillestrøm</h4>
+            <p class="cv-item-subtitle">Arbeidsgiver: Mona Johnsen</p>
+            <p class="cv-item-date">Januar 2022 – Desember 2025</p>
+            <p class="cv-text">Erfaring med kundeservice, servering og effektiv håndtering av travle arbeidsmiljøer. Utviklet gode samarbeidsevner, kommunikasjon og evne til å yte høy service under press. Jobbet som skiftleder det siste året. Lærte om lederskap, større ansvar og fleksibel problemhåndtering.</p>
+          </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="cv-section">
+          <h3 class="cv-section-title">Ekspertise</h3>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Programmering</h4>
+              <p>Java, Kotlin, Python, C, HTML, CSS, Grunnleggende C#</p>
+            </div>
+            <div class="skill-category">
+              <h4>Versjonskontroll</h4>
+              <p>Git / GitHub (Praktisk erfaring med)</p>
+            </div>
+            <div class="skill-category">
+              <h4>Andre ferdigheter</h4>
+              <p>Algoritmer og datastrukturer, Kundeservice og ledelse, Samarbeid og lagarbeid</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="cv-section">
+          <h3 class="cv-section-title">Språk</h3>
+          <div class="language-item">
+            <span class="language-name">Norsk:</span>
+            <span class="stars">★★★★★</span>
+          </div>
+          <div class="language-item">
+            <span class="language-name">Engelsk:</span>
+            <span class="stars">★★★★☆</span>
+          </div>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="cv-section">
+          <h3 class="cv-section-title">Interesser</h3>
+          <p class="cv-text">Spill • Programmering • Sosialisere</p>
+        </div>
+
+        <!-- References Section -->
+        <div class="cv-section">
+          <h3 class="cv-section-title">Referanser</h3>
+          <p class="cv-text">Mona Johnsen - Oppgis ved forespørsel.</p>
+        </div>
+      </div>
 
       <h2 id="kontakt">Kontakt</h2>
-      <ul style="list-style-type: none; padding: 0; margin: 50;">
-        <li>E-post – davidaleksandersen@hotmail.com</li>
+      <ul class="clean" style="margin-top: 24px;">
+        <li>E-post – <a href="mailto:davidaleksandersen@hotmail.com">davidaleksandersen@hotmail.com</a></li>
         <li>Tlf – 97861608</li>
-        <li><a href="https://www.linkedin.com/in/david-kristoffer-aleksandersen-41b666240/">Linkedin</a></li>
+        <li><a href="https://www.linkedin.com/in/david-kristoffer-aleksandersen-41b666240/">LinkedIn</a></li>
       </ul>
+
       <footer>© <span id="y"></span> David Kristoffer Aleksandersen.</footer>
-      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-    </div>
-  </body>
+    </section>
+  </main>
+
+  <!-- Tiny, GPU-friendly parallax controller -->
+  <script>
+    (function () {
+      const els = Array.from(document.querySelectorAll('[data-speed]'));
+      if (!els.length) return;
+
+      let ticking = false;
+      function update() {
+        const y = window.scrollY || window.pageYOffset;
+        for (const el of els) {
+          const speed = parseFloat(el.dataset.speed || '0.2');
+          const translateY = y * speed;
+          
+          // Add scale and rotation effects for more dramatic parallax
+          const scale = 1 + (y * 0.0003 * speed);
+          const scaleValue = Math.max(0.7, Math.min(1.4, scale));
+          const rotation = y * 0.02 * speed;
+          
+          el.style.transform = `translate3d(0,${translateY}px,0) scale(${scaleValue}) rotate(${rotation}deg)`;
+        }
+        ticking = false;
+      }
+      function onScroll() {
+        if (!ticking) { requestAnimationFrame(update); ticking = true; }
+      }
+      
+      // Initial call to set up transforms
+      update();
+      
+      // Add event listeners
+      addEventListener('scroll', onScroll, { passive: true });
+      addEventListener('resize', onScroll, { passive: true });
+
+      // Footer year
+      document.getElementById('y').textContent = new Date().getFullYear();
+      
+      // Enhanced smooth scrolling for back to top
+      const backToTopLink = document.querySelector('a[href="#"]');
+      if (backToTopLink) {
+        backToTopLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+    })();
+  </script>
+</body>
 </html>
