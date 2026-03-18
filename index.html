@@ -45,25 +45,22 @@
       <h2 id="CV">CV</h2>
       
       <div class="cv-container">
-        <!-- Header Section -->
         <div class="cv-header">
           <h1 class="cv-name">DAVID KRISTOFFER ALEKSANDERSEN</h1>
           <div class="cv-contact">
-            <div class="contact-item">📍 Adresse: Terningbekk 6, 0272 Oslo</div>
-            <div class="contact-item">📞 Telefon: 97861608</div>
-            <div class="contact-item">📧 E-post: davidkaleksandersen@hotmail.com</div>
-            <div class="contact-item">🎂 Født: 20.11.2003</div>
-            <div class="contact-item">🌍 Nasjonalitet: Norsk</div>
+            <div class="contact-item">Adresse: Terningbekk 6, 0272 Oslo</div>
+            <div class="contact-item">Telefon: 97861608</div>
+            <div class="contact-item">E-post: davidkaleksandersen@hotmail.com</div>
+            <div class="contact-item">Født: 20.11.2003</div>
+            <div class="contact-item">Nasjonalitet: Norsk</div>
           </div>
         </div>
-
-        <!-- Profile Section -->
+        
         <div class="cv-section">
           <h3 class="cv-section-title">Profil</h3>
           <p class="cv-text">Bachelor i informatikk: programmering og systemarkitektur. Har solid erfaring med programmering, systemutvikling og teknisk problemløsning, kombinert med gode samarbeidsevner og serviceerfaring som servitør. Jobber effektivt i hektiske miljøer og er god på problemløsing.</p>
         </div>
-
-        <!-- Education Section -->
+        
         <div class="cv-section">
           <h3 class="cv-section-title">Utdanning</h3>
           <div class="cv-item">
@@ -74,7 +71,6 @@
           </div>
         </div>
 
-        <!-- Work Experience Section -->
         <div class="cv-section">
           <h3 class="cv-section-title">Arbeidserfaring</h3>
           <div class="cv-item">
@@ -85,7 +81,6 @@
           </div>
         </div>
 
-        <!-- Skills Section -->
         <div class="cv-section">
           <h3 class="cv-section-title">Ekspertise</h3>
           <div class="skills-grid">
@@ -104,7 +99,6 @@
           </div>
         </div>
 
-        <!-- Languages Section -->
         <div class="cv-section">
           <h3 class="cv-section-title">Språk</h3>
           <div class="language-item">
@@ -116,14 +110,12 @@
             <span class="stars">★★★★☆</span>
           </div>
         </div>
-
-        <!-- Interests Section -->
+        
         <div class="cv-section">
           <h3 class="cv-section-title">Interesser</h3>
           <p class="cv-text">Spill • Programmering • Sosialisere</p>
         </div>
 
-        <!-- References Section -->
         <div class="cv-section">
           <h3 class="cv-section-title">Referanser</h3>
           <p class="cv-text">Mona Johnsen - Oppgis ved forespørsel.</p>
@@ -141,7 +133,6 @@
     </section>
   </main>
 
-  <!-- Tiny, GPU-friendly parallax controller -->
   <script>
     (function () {
       const els = Array.from(document.querySelectorAll('[data-speed]'));
@@ -154,7 +145,6 @@
           const speed = parseFloat(el.dataset.speed || '0.2');
           const translateY = y * speed;
           
-          // Add scale and rotation effects for more dramatic parallax
           const scale = 1 + (y * 0.0003 * speed);
           const scaleValue = Math.max(0.7, Math.min(1.4, scale));
           const rotation = y * 0.02 * speed;
@@ -167,17 +157,13 @@
         if (!ticking) { requestAnimationFrame(update); ticking = true; }
       }
       
-      // Initial call to set up transforms
       update();
       
-      // Add event listeners
       addEventListener('scroll', onScroll, { passive: true });
       addEventListener('resize', onScroll, { passive: true });
 
-      // Footer year
       document.getElementById('y').textContent = new Date().getFullYear();
       
-      // Enhanced smooth scrolling for back to top
       const backToTopLink = document.querySelector('a[href="#"]');
       if (backToTopLink) {
         backToTopLink.addEventListener('click', function(e) {
